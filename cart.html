@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyllist - Your Vinyl Shop</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/search.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-circle">V</div>
+                <span>Vinyl Vault</span>
+            </a>  
+            <div class="nav-actions">
+                <a href="cart.html" class="icon-button cart-button" aria-label="장바구니">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="icon-button search-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="turntable-section">
+            <div class="turntable">
+                <div class="platter">
+                    <div class="vinyl-record">
+                        <div class="vinyl-label">vinyllist</div>
+                    </div>
+                    <div class="center-spindle"></div>
+                </div>
+                <div class="tonearm-base">
+                    <div class="tonearm"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <span class="item-count">0 items</span>
+            </div>
+
+            <div id="cartItems" class="cart-items"></div>
+
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">
+                BUY
+            </button>
+        </div>
+    </main>
+
+    <script src="js/counter.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

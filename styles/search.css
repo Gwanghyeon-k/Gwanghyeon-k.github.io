@@ -1,0 +1,100 @@
+/* 검색 오버레이 */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85); /* 어두운 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 검색 컨테이너 */
+.search-container {
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  text-align: center;
+  width: min(90%, 400px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 검색 헤더 */
+.search-header {
+  text-align: center;
+}
+
+.search-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+}
+
+/* 검색 바디 */
+.search-body {
+  position: relative;
+}
+
+/* 입력 필드와 버튼 래퍼 */
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* 입력 필드 */
+.search-input {
+  width: 100%;
+  padding: 15px 40px 15px 15px;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #059669;
+}
+
+/* 닫기 버튼 */
+.close-search {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-search:hover {
+  color: #333333;
+}
+
+.search-footer {
+  font-size: 0.875rem;
+  color: #666666;
+  text-align: center;
+}
+
+.search-footer p {
+  margin: 0;
+  line-height: 1.5;
+}

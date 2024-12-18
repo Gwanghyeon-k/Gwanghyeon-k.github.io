@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Collection</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/cards.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="background-overlay"></div>
+        <div class="background-image" id="backgroundImage"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-circle">V</div>
+                <span>Vinyl Vault</span>
+            </a>            
+            <div class="nav-actions">
+                <a href="cart.html" class="icon-button cart-button" aria-label="장바구니">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <!-- 배지 요소 추가 -->
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>            
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+                <div class="region-nav">
+                    <div class="regions">
+                        <!-- Genre navigation will be inserted by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-cards" id="locationCards">
+                <!-- Cards will be inserted by JavaScript -->
+            </div>
+
+            <div class="navigation-controls">
+                <div class="nav-buttons">
+                    <button class="nav-btn prev">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"></path>
+                        </svg>
+                    </button>
+                    <button class="nav-btn next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="page-indicator">
+                    <span class="current">01</span>
+                    <span class="total">10</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data/genres.js"></script>
+    <script src="js/data/albums.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/GenreSelector.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/counter.js"></script>
+</body>
+</html>

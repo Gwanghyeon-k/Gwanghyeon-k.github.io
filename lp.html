@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weeknd - Artist Page</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/lp.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/search.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-circle">V</div>
+                <span>Vinyl Vault</span>
+            </a>  
+            <div class="nav-actions">
+                <a href="cart.html" class="icon-button cart-button" aria-label="장바구니">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="icon-button search-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="main-layout">
+            <div class="artist-section">
+                <div class="artist-image">
+                    <img src="image/weeknd.jpg" alt="The Weeknd - Starboy Album Cover">
+                </div>
+                <h1>The Weeknd</h1>
+            </div>
+
+            <div class="cards-container">
+                <!-- Album Info Card -->
+                <div class="card">
+                    <h3>Album Info</h3>
+                    <div class="card-content">
+                        <div class="album-header">
+                            <div class="album-title">
+                                <h4>Starboy</h4>
+                                <span class="album-year">2016</span>
+                            </div>
+                            <div class="album-meta">
+                                <span class="meta-item">
+                                    <i class="meta-icon">🎵</i>
+                                    18 Tracks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="meta-icon">⏱</i>
+                                    68:40
+                                </span>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Release Date</span>
+                                <span class="detail-value">November 25, 2016</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Genre</span>
+                                <span class="detail-value">R&B, Pop, Dance</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Label</span>
+                                <span class="detail-value">XO, Republic Records</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Producer</span>
+                                <span class="detail-value">The Weeknd, Daft Punk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tracks Card -->
+                <div class="card">
+                    <h3>Tracks</h3>
+                    <div class="card-content">
+                        <div class="tracks-container">
+                            <div id="trackList" class="track-list">
+                                <!-- Tracks will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Videos Card -->
+                <div class="card">
+                    <h3>Music Videos</h3>
+                    <div class="card-content">
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="image/weeknd.jpg" alt="Starboy Music Video">
+                                <div class="play-overlay">▶</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Starboy ft. Daft Punk</h4>
+                                <p class="views">1.2B views</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Album Card -->
+                <div class="card">
+                    <h3>Purchase Album</h3>
+                    <div class="card-content">
+                        <div class="format">
+                            <h4>Vinyl LP</h4>
+                            <p class="price">$29.99</p>
+                            <ul class="features">
+                                <li>180g Double Vinyl</li>
+                                <li>Gatefold Sleeve</li>
+                                <li>Limited Edition</li>
+                            </ul>
+                            <button 
+                                class="buy-button" 
+                                data-id="1" 
+                                data-title="Starboy - Vinyl LP" 
+                                data-price="29.99" 
+                                data-format="Vinyl LP" 
+                                data-image="image/weeknd.jpg">
+                                add to cart
+                            </button>
+                        </div>
+                        <div class="format">
+                            <h4>Digital Album</h4>
+                            <p class="price">$9.99</p>
+                            <ul class="features">
+                                <li>High Quality MP3</li>
+                                <li>Instant Download</li>
+                                <li>Digital Booklet</li>
+                            </ul>
+                            <button 
+                                class="buy-button" 
+                                data-id="2" 
+                                data-title="Starboy - Digital Album" 
+                                data-price="9.99" 
+                                data-format="Digital Album" 
+                                data-image="image/weeknd.jpg">
+                                Buy Digital
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/counter.js"></script> <!-- 장바구니 수량 업데이트 스크립트 먼저 로드 -->
+    <script src="js/lp.js"></script> <!-- lp.js 로드 -->
+    <script src="js/search.js"></script>
+</body>
+</html>
